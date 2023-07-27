@@ -1,4 +1,4 @@
-Tokens
+Tokens 
 
 Artificial Token. It's a simple program that stores the input and shows the output of the user. 
 
@@ -6,7 +6,7 @@ Description
 
 It's a program that stores a value and burns a value of a token. It's a simple program that stores and output all the stored data. 
 This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
-
+            
 
 Getting Started
 
@@ -17,34 +17,34 @@ To run this program, you can use Remix, an online Solidity IDE. To get started, 
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. 
 Save the file with a .sol extension (e.g., Token.sol). Copy and paste the following code into the file:
 
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+    // SPDX-License-Identifier: MIT
+    pragma solidity 0.8.18;
 
-contract MyToken {
+    contract MyToken {
 
-    // public variables here
-    string public tokenName = "SOLID"; 
-    string public tokenAbbrv = "SLD"; 
-    uint public totalSupply = 0; 
-
-    // mapping variable here
-    mapping(address => uint) public balance;  
-
-    // mint function
-    function mint(address _address, uint _value) external {
-        balance[_address] += _value;
-        totalSupply += _value; 
-
-    }
-
-    // burn function
-    function burn(address _address, uint _value) external {
-        if (balance[_address] >= _value) {
-            balance[_address] -= _value;
-            totalSupply -= _value; 
+        // public variables here
+        string public tokenName = "SOLID"; 
+        string public tokenAbbrv = "SLD"; 
+        uint public totalSupply = 0; 
+    
+        // mapping variable here
+        mapping(address => uint) public balance;  
+    
+        // mint function
+        function mint(address _address, uint _value) external {
+            balance[_address] += _value;
+            totalSupply += _value; 
+    
+        }
+    
+        // burn function
+        function burn(address _address, uint _value) external {
+            if (balance[_address] >= _value) {
+                balance[_address] -= _value;
+                totalSupply -= _value; 
+            }
         }
     }
-}
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. 
 Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile Tokens.sol" button.
@@ -62,6 +62,7 @@ Finally, call the "tokenName", "tokenAbrv", and "totalSupply" to see the value o
 Authors
 
 Renan Ashley Alcantara
+
 @metacraftersio
 
 License
